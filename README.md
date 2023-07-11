@@ -9,8 +9,8 @@ Credits & Source from: https://github.com/sendmail2krrish/eCommerce-site-using-N
 <b>apt install mysql-server -y</b> <br/>
 3. Comment bind-address configuration using <b> vi /etc/mysql/mysql.conf.d/mysqld.cnf </b> and save the configuration using ESC followed :wq! <br/>
 4. Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
-mysql -u root
-USE mysql;
+mysql -u root </b> <br/>
+USE mysql; </b> <br/>
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOURNEWPASSWORD';
 Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
 6. Logging to mysql using <b>mysql -h 127.0.0.1 -u root -p</b>  <br/>
