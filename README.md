@@ -9,12 +9,13 @@ Credits & Source from: https://github.com/sendmail2krrish/eCommerce-site-using-N
 <b>apt install mysql-server -y</b> <br/>
 3. Comment bind-address configuration using <b> vi /etc/mysql/mysql.conf.d/mysqld.cnf </b> and save the configuration using ESC followed :wq! <br/>
 4. Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
-FLUSH PRIVILEGES;
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'YOURNEWPASSWORD';
-FLUSH PRIVILEGES;
-5. Logging to mysql using <b>mysql -h 127.0.0.1 -u root -p</b>  <br/>
-6. Create a database named eCommerce using <b>CREATE DATABASE eCommerce </b> <br/>
-7. Run this command <b> GRANT ALL PRIVILEGES ON \*.\* TO 'root'@'%' IDENTIFIED BY 'P@ssw0rd2020';</b> to allow mysql to be accessed from app-server <br/>
+mysql -u root
+USE mysql;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOURNEWPASSWORD';
+Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
+6. Logging to mysql using <b>mysql -h 127.0.0.1 -u root -p</b>  <br/>
+7. Create a database named eCommerce using <b>CREATE DATABASE eCommerce </b> <br/>
+8. Run this command <b> GRANT ALL PRIVILEGES ON \*.\* TO 'root'@'%' IDENTIFIED BY 'P@ssw0rd2020';</b> to allow mysql to be accessed from app-server <br/>
 7. Exit mysql session <br/>
 8. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/learngcpwithmahesh/Dress4Win.git </b>  <br/>
 9. Change directory to Dress4Win/sql <br/>
