@@ -16,7 +16,7 @@ mysql> FLUSH PRIVILEGES; </b> <br/>
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%' WITH GRANT OPTION; </b> <br/>
 mysql> ALTER USER 'new_user'@'%' IDENTIFIED BY 'new_password'; </b> <br/>
 Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
-6. Logging to mysql using <b>mysql -h 127.0.0.1 -u root -p</b>  <br/>
+6. Logging to mysql using <b>mysql -h 127.0.0.1 -u new_user -p</b>  <br/>
 7. Create a database named eCommerce using <b>CREATE DATABASE eCommerce; </b> <br/>
 8. Exit mysql session <br/>
 9. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/learngcpwithmahesh/Dress4Win.git </b>  <br/>
