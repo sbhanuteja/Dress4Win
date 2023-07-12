@@ -10,17 +10,18 @@ Credits & Source from: https://github.com/sendmail2krrish/eCommerce-site-using-N
 3. Comment bind-address configuration using <b> vi /etc/mysql/mysql.conf.d/mysqld.cnf </b> and save the configuration using ESC followed :wq! <br/>
 4. Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
 mysql -u root </b> <br/>
-USE mysql; </b> <br/>
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOURNEWPASSWORD';
+mysql> CREATE USER 'new_user'@'%' IDENTIFIED BY 'new_password'; </b> <br/>
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%'; </b> <br/>
+mysql> FLUSH PRIVILEGES; </b> <br/>
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%' WITH GRANT OPTION; </b> <br/>
+mysql> ALTER USER 'new_user'@'%' IDENTIFIED BY 'new_password'; </b> <br/>
 Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
 6. Logging to mysql using <b>mysql -h 127.0.0.1 -u root -p</b>  <br/>
-7. Create a database named eCommerce using <b>CREATE DATABASE eCommerce </b> <br/>
-8. Run this command <b> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'P@ssw0rd2020' WITH GRANT OPTION; 
-FLUSH PRIVILEGES;</b> to allow mysql to be accessed from app-server <br/>
-7. Exit mysql session <br/>
-8. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/learngcpwithmahesh/Dress4Win.git </b>  <br/>
-9. Change directory to Dress4Win/sql <br/>
-10. Create the table schema using <b> mysql -h 127.0.0.1 -u root -p < ecommerce.sql </b> <br/>
+7. Create a database named eCommerce using <b>CREATE DATABASE eCommerce; </b> <br/>
+8. Exit mysql session <br/>
+9. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/learngcpwithmahesh/Dress4Win.git </b>  <br/>
+10. Change directory to Dress4Win/sql <br/>
+11. Create the table schema using <b> mysql -h 127.0.0.1 -u root -p < ecommerce.sql </b> <br/>
  
 ### Launching app-server
 1. Provision a Google Compute Engine (GCE) with below startup script <br/>
