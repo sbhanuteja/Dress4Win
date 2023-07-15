@@ -1,4 +1,4 @@
-Credits & Source from: https://github.com/sendmail2krrish/eCommerce-site-using-Node-Express-js
+
 
 # Dress4Win
 
@@ -19,7 +19,7 @@ Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
 6. Logging to mysql using <b>mysql -h 127.0.0.1 -u new_user -p</b>  <br/>
 7. Create a database named eCommerce using <b>CREATE DATABASE eCommerce; </b> <br/>
 8. Exit mysql session <br/>
-9. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/learngcpwithmahesh/Dress4Win.git </b>  <br/>
+9. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/sbhanuteja/Dress4Win.git </b>  <br/>
 10. Change directory to Dress4Win/sql <br/>
 11. Create the table schema using <b> mysql -h 127.0.0.1 -u root -p < ecommerce.sql </b> <br/>
  
