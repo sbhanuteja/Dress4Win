@@ -21,7 +21,7 @@ Restart MySQL Service using <b>systemctl restart mysql</b> <br/>
 8. Exit mysql session <br/>
 9. Change directory to home directory using <b>cd ~</b> and run <b> git clone https://github.com/sbhanuteja/Dress4Win.git </b>  <br/>
 10. Change directory to Dress4Win/sql <br/>
-11. Create the table schema using <b> mysql -h 127.0.0.1 -u root -p < ecommerce.sql </b> <br/>
+11. Create the table schema using <b> mysql -h 127.0.0.1 -u new_user -p eCommerce < ecommerce.sql </b> <br/>
  
 ### Launching app-server
 1. Provision a Google Compute Engine (GCE) with below startup script <br/>
